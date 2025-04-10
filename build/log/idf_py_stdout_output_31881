@@ -1,0 +1,639 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/esp-idf/esptool_py && /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/bootloader.bin
+Bootloader binary size 0x6650 bytes. 0x9b0 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/PROVE-ESPOSIMETRO-MIO.c.obj
+In file included from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/joy_stick.h:4,
+                 from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c:32:
+/home/gabri/PROGRAMMING/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c: In function 'app_main':
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c:58:14: warning: unused variable 'lineChar' [-Wunused-variable]
+   58 |         char lineChar[20];
+      |              ^~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c:57:26: warning: variable 'bottom' set but not used [-Wunused-but-set-variable]
+   57 |         int center, top, bottom;
+      |                          ^~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c:57:21: warning: variable 'top' set but not used [-Wunused-but-set-variable]
+   57 |         int center, top, bottom;
+      |                     ^~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c:57:13: warning: variable 'center' set but not used [-Wunused-but-set-variable]
+   57 |         int center, top, bottom;
+      |             ^~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/PROVE-ESPOSIMETRO-MIO.c:30:
+/home/gabri/PROGRAMMING/esp-idf/components/ssd1306/font8x8_basic.h: At top level:
+/home/gabri/PROGRAMMING/esp-idf/components/ssd1306/font8x8_basic.h:41:16: warning: 'font8x8_basic_tr' defined but not used [-Wunused-variable]
+   41 | static uint8_t font8x8_basic_tr[128][8] = {
+      |                ^~~~~~~~~~~~~~~~
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bh1750_mio.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/bh1750_mio.c.obj 
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_MDNS_VERSION_NUMBER=\"1.8.2\" -DESP_PLATFORM -DIDF_VER=\"v5.5-dev-2182-ga6c3a9cbbb-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/config -I/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main -I/home/gabri/PROGRAMMING/esp-idf/components/newlib/platform_include -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/config/include -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/config/include/freertos -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/config/xtensa/include -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/gabri/PROGRAMMING/esp-idf/components/freertos/esp_additions/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/include/soc -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/dma/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/ldo/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/debug_probe/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/power_supply/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/port/esp32/. -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hw_support/port/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/heap/include -I/home/gabri/PROGRAMMING/esp-idf/components/heap/tlsf -I/home/gabri/PROGRAMMING/esp-idf/components/log/include -I/home/gabri/PROGRAMMING/esp-idf/components/soc/include -I/home/gabri/PROGRAMMING/esp-idf/components/soc/esp32 -I/home/gabri/PROGRAMMING/esp-idf/components/soc/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/soc/esp32/register -I/home/gabri/PROGRAMMING/esp-idf/components/hal/platform_port/include -I/home/gabri/PROGRAMMING/esp-idf/components/hal/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/hal/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_rom/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_rom/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/gabri/PROGRAMMING/esp-idf/components/esp_rom/esp32 -I/home/gabri/PROGRAMMING/esp-idf/components/esp_common/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_system/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_system/port/soc -I/home/gabri/PROGRAMMING/esp-idf/components/esp_system/port/include/private -I/home/gabri/PROGRAMMING/esp-idf/components/xtensa/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/xtensa/include -I/home/gabri/PROGRAMMING/esp-idf/components/xtensa/deprecated_include -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/include -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/include/apps -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/include/apps/sntp -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/lwip/src/include -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/port/include -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/port/freertos/include -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/port/esp32xx/include -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/gabri/PROGRAMMING/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/managed_components/espressif__mdns/include -I/home/gabri/PROGRAMMING/esp-idf/components/console -I/home/gabri/PROGRAMMING/esp-idf/components/vfs/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_vfs_console/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_netif/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_event/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_gpio/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_pm/include -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/port/include -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/mbedtls/include -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/mbedtls/library -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/gabri/PROGRAMMING/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/gabri/PROGRAMMING/esp-idf/components/esp_app_format/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_bootloader_format/include -I/home/gabri/PROGRAMMING/esp-idf/components/app_update/include -I/home/gabri/PROGRAMMING/esp-idf/components/bootloader_support/include -I/home/gabri/PROGRAMMING/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_partition/include -I/home/gabri/PROGRAMMING/esp-idf/components/efuse/include -I/home/gabri/PROGRAMMING/esp-idf/components/efuse/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_mm/include -I/home/gabri/PROGRAMMING/esp-idf/components/spi_flash/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_security/include -I/home/gabri/PROGRAMMING/esp-idf/components/pthread/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_timer/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_gptimer/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_ringbuf/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_uart/include -I/home/gabri/PROGRAMMING/esp-idf/components/app_trace/include -I/home/gabri/PROGRAMMING/esp-idf/components/nvs_flash/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_phy/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_phy/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/gabri/PROGRAMMING/esp-idf/components/wpa_supplicant/include -I/home/gabri/PROGRAMMING/esp-idf/components/wpa_supplicant/port/include -I/home/gabri/PROGRAMMING/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_coex/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_wifi/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_wifi/include/local -I/home/gabri/PROGRAMMING/esp-idf/components/esp_wifi/wifi_apps/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_spi/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_gdbstub/include -I/home/gabri/PROGRAMMING/esp-idf/components/unity/include -I/home/gabri/PROGRAMMING/esp-idf/components/unity/unity/src -I/home/gabri/PROGRAMMING/esp-idf/components/cmock/CMock/src -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_pcnt/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_mcpwm/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_ana_cmpr/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_i2s/include -I/home/gabri/PROGRAMMING/esp-idf/components/sdmmc/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_sdmmc/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_sdspi/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_sdio/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_dac/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_rmt/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_tsens/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_sdm/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_i2c/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_ledc/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_parlio/include -I/home/gabri/PROGRAMMING/esp-idf/components/driver/deprecated -I/home/gabri/PROGRAMMING/esp-idf/components/driver/i2c/include -I/home/gabri/PROGRAMMING/esp-idf/components/driver/touch_sensor/include -I/home/gabri/PROGRAMMING/esp-idf/components/driver/twai/include -I/home/gabri/PROGRAMMING/esp-idf/components/driver/touch_sensor/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/http_parser -I/home/gabri/PROGRAMMING/esp-idf/components/esp-tls -I/home/gabri/PROGRAMMING/esp-idf/components/esp-tls/esp-tls-crypto -I/home/gabri/PROGRAMMING/esp-idf/components/esp_adc/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_adc/interface -I/home/gabri/PROGRAMMING/esp-idf/components/esp_adc/esp32/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_adc/deprecated/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_bitscrambler/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_isp/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_cam/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_cam/interface -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_jpeg/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_ppa/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_touch_sens/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_driver_touch_sens/hw_ver1/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_eth/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_hid/include -I/home/gabri/PROGRAMMING/esp-idf/components/tcp_transport/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_http_client/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_http_server/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_https_ota/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_https_server/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_psram/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_lcd/include -I/home/gabri/PROGRAMMING/esp-idf/components/esp_lcd/interface -I/home/gabri/PROGRAMMING/esp-idf/components/protobuf-c/protobuf-c -I/home/gabri/PROGRAMMING/esp-idf/components/protocomm/include/common -I/home/gabri/PROGRAMMING/esp-idf/components/protocomm/include/security -I/home/gabri/PROGRAMMING/esp-idf/components/protocomm/include/transports -I/home/gabri/PROGRAMMING/esp-idf/components/protocomm/include/crypto/srp6a -I/home/gabri/PROGRAMMING/esp-idf/components/protocomm/proto-c -I/home/gabri/PROGRAMMING/esp-idf/components/esp_local_ctrl/include -I/home/gabri/PROGRAMMING/esp-idf/components/espcoredump/include -I/home/gabri/PROGRAMMING/esp-idf/components/espcoredump/include/port/xtensa -I/home/gabri/PROGRAMMING/esp-idf/components/wear_levelling/include -I/home/gabri/PROGRAMMING/esp-idf/components/fatfs/diskio -I/home/gabri/PROGRAMMING/esp-idf/components/fatfs/src -I/home/gabri/PROGRAMMING/esp-idf/components/fatfs/vfs -I/home/gabri/PROGRAMMING/esp-idf/components/idf_test/include -I/home/gabri/PROGRAMMING/esp-idf/components/idf_test/include/esp32 -I/home/gabri/PROGRAMMING/esp-idf/components/ieee802154/include -I/home/gabri/PROGRAMMING/esp-idf/components/json/cJSON -I/home/gabri/PROGRAMMING/esp-idf/components/mqtt/esp-mqtt/include -I/home/gabri/PROGRAMMING/esp-idf/components/nvs_sec_provider/include -I/home/gabri/PROGRAMMING/esp-idf/components/perfmon/include -I/home/gabri/PROGRAMMING/esp-idf/components/rt/include -I/home/gabri/PROGRAMMING/esp-idf/components/spiffs/include -I/home/gabri/PROGRAMMING/esp-idf/components/ssd1306 -I/home/gabri/PROGRAMMING/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO=. -fmacro-prefix-map=/home/gabri/PROGRAMMING/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/bh1750_mio.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/bh1750_mio.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/bh1750_mio.c.obj -c /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c
+In file included from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:1:
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.h:16:23: error: unknown type name 'i2c_master_dev_handle_t'
+   16 | esp_err_t bh1750_init(i2c_master_dev_handle_t dev, bh1750_mode_t mode);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.h:17:29: error: unknown type name 'i2c_master_dev_handle_t'
+   17 | esp_err_t bh1750_read_light(i2c_master_dev_handle_t dev, float *lux);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:2:
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:38:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   38 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:41:
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:66:6: error: #error "FreeRTOS.h must be included before list.h"
+   66 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:151:25: error: unknown type name 'TickType_t'
+  151 |     configLIST_VOLATILE TickType_t xItemValue;          /*< The value being listed.  In most cases this is used to sort the list in ascending order. */
+      |                         ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:179:14: error: unknown type name 'UBaseType_t'
+  179 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h: In function 'vListInitialise':
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:47: error: expected declaration specifiers before 'PRIVILEGED_FUNCTION'
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:448:55: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  448 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:462:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  462 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:484:57: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  484 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:1: error: unknown type name 'UBaseType_t'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:63: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:92:1: warning: empty declaration
+   92 | struct tskTaskControlBlock; /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+      | ^~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:93:38: error: storage class specified for parameter 'TaskHandle_t'
+   93 | typedef struct tskTaskControlBlock * TaskHandle_t;
+      |                                      ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:21: error: expected declaration specifiers or '...' before '*' token
+   99 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                     ^
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:110:3: error: storage class specified for parameter 'eTaskState'
+  110 | } eTaskState;
+      |   ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:120:3: error: storage class specified for parameter 'eNotifyAction'
+  120 | } eNotifyAction;
+      |   ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:129:5: error: unknown type name 'BaseType_t'
+  129 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:130:5: error: unknown type name 'TickType_t'
+  130 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:131:3: error: storage class specified for parameter 'TimeOut_t'
+  131 | } TimeOut_t;
+      |   ^~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:141:3: error: storage class specified for parameter 'MemoryRegion_t'
+  141 | } MemoryRegion_t;
+      |   ^~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:148:5: error: unknown type name 'TaskFunction_t'
+  148 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: unknown type name 'configSTACK_DEPTH_TYPE'
+  150 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:152:5: error: unknown type name 'UBaseType_t'
+  152 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:153:5: error: unknown type name 'StackType_t'
+  153 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:154:5: error: expected specifier-qualifier-list before 'MemoryRegion_t'
+  154 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |     ^~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:158:3: error: storage class specified for parameter 'TaskParameters_t'
+  158 | } TaskParameters_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:166:5: error: expected specifier-qualifier-list before 'TaskHandle_t'
+  166 |     TaskHandle_t xHandle;                         /**< The handle of the task to which the rest of the information in the structure relates. */
+      |     ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:182:3: error: storage class specified for parameter 'TaskStatus_t'
+  182 | } TaskStatus_t;
+      |   ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:192:3: error: storage class specified for parameter 'eSleepModeStatus'
+  192 | } eSleepModeStatus;
+      |   ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:746:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  746 | void vTaskAllocateMPURegions( TaskHandle_t xTask,
+      |                               ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:37: error: type defaults to 'int' in declaration of 'MemoryRegion_t' [-Wimplicit-int]
+  747 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:52: error: expected ';', ',' or ')' before '*' token
+  747 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                    ^
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:785:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  785 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:834:24: error: unknown type name 'TickType_t'
+  834 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:834:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  834 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:896:1: error: unknown type name 'BaseType_t'
+  896 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:896:29: error: unknown type name 'TickType_t'
+  896 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      |                             ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:35: error: unknown type name 'TickType_t'
+  897 |                             const TickType_t xTimeIncrement ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:938:1: error: unknown type name 'BaseType_t'
+  938 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:938:29: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  938 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                             ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:1: error: unknown type name 'UBaseType_t'
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:38: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Wimplicit-int]
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:982:51: error: expected ';', ',' or ')' before 'xTask'
+  982 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:1: error: unknown type name 'UBaseType_t'
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:45: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Wimplicit-int]
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:988:58: error: expected ';', ',' or ')' before 'xTask'
+  988 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1004:1: error: expected declaration specifiers before 'eTaskState'
+ 1004 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1057:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1057 | void vTaskGetInfo( TaskHandle_t xTask,
+      |                    ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:20: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1058 |                    TaskStatus_t * pxTaskStatus,
+      |                    ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1059:20: error: unknown type name 'BaseType_t'
+ 1059 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1060:20: error: expected declaration specifiers or '...' before 'eTaskState'
+ 1060 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1099:24: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1099 | void vTaskPrioritySet( TaskHandle_t xTask,
+      |                        ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1100:24: error: unknown type name 'UBaseType_t'
+ 1100 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1148:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1148 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1194:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1194 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1220:1: error: unknown type name 'BaseType_t'
+ 1220 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1220:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1220 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1252:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1252 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1305:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1305 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1355:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1355 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1406:1: error: unknown type name 'BaseType_t'
+ 1406 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1406:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1406 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1418:1: error: unknown type name 'TickType_t'
+ 1418 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1418:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1418 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1431:1: error: unknown type name 'TickType_t'
+ 1431 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1431:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1431 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1442:1: error: unknown type name 'UBaseType_t'
+ 1442 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1442:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1442 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1452:23: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1452 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                       ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1465:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1465 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      | ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1513:1: error: unknown type name 'UBaseType_t'
+ 1513 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1513:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1513 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1538:1: error: unknown type name 'configSTACK_DEPTH_TYPE'
+ 1538 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1538:54: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1538 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1641:1: error: unknown type name 'BaseType_t'
+ 1641 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1641:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1641 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1651:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1651 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1750:1: error: unknown type name 'UBaseType_t'
+ 1750 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1750:35: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1750 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      |                                   ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1751:41: error: unknown type name 'UBaseType_t'
+ 1751 |                                   const UBaseType_t uxArraySize,
+      |                                         ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1752:35: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1752 |                                   configRUN_TIME_COUNTER_TYPE * const pulTotalRunTime ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1798:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1798 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1849:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1849 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1886 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1886:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1886 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1992:1: error: unknown type name 'BaseType_t'
+ 1992 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1992:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1992 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      |                                ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1993:32: error: unknown type name 'UBaseType_t'
+ 1993 |                                UBaseType_t uxIndexToNotify,
+      |                                ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1995:32: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 1995 |                                eNotifyAction eAction,
+      |                                ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:1: error: unknown type name 'BaseType_t'
+ 2136 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2136:39: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2136 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      |                                       ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2137:39: error: unknown type name 'UBaseType_t'
+ 2137 |                                       UBaseType_t uxIndexToNotify,
+      |                                       ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2139:39: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 2139 |                                       eNotifyAction eAction,
+      |                                       ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2141:39: error: unknown type name 'BaseType_t'
+ 2141 |                                       BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2271:1: error: unknown type name 'BaseType_t'
+ 2271 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2271:36: error: unknown type name 'UBaseType_t'
+ 2271 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      |                                    ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2275:36: error: unknown type name 'TickType_t'
+ 2275 |                                    TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2427:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2427 | void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,
+      |                                     ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2428:37: error: unknown type name 'UBaseType_t'
+ 2428 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2429:37: error: unknown type name 'BaseType_t'
+ 2429 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2527:35: error: unknown type name 'UBaseType_t'
+ 2527 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2528:35: error: unknown type name 'BaseType_t'
+ 2528 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2529:35: error: unknown type name 'TickType_t'
+ 2529 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2586:1: error: unknown type name 'BaseType_t'
+ 2586 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2586:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2586 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2587:42: error: unknown type name 'UBaseType_t'
+ 2587 |                                          UBaseType_t uxIndexToClear ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2644:41: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2644 | uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+      |                                         ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2645:41: error: unknown type name 'UBaseType_t'
+ 2645 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2661:28: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2661 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2741:1: error: unknown type name 'BaseType_t'
+ 2741 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2741:34: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2741 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      |                                  ^~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2742:34: error: unknown type name 'TickType_t'
+ 2742 |                                  TickType_t * const pxTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2765:1: error: unknown type name 'BaseType_t'
+ 2765 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2765:31: error: unknown type name 'TickType_t'
+ 2765 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2792:1: error: unknown type name 'BaseType_t'
+ 2792 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2792:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2792 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2826:35: error: unknown type name 'TickType_t'
+ 2826 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2826:61: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2826 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2828:44: error: unknown type name 'TickType_t'
+ 2828 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:44: error: unknown type name 'TickType_t'
+ 2829 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:70: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2829 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2843:39: error: unknown type name 'TickType_t'
+ 2843 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2844:45: error: unknown type name 'BaseType_t'
+ 2844 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2870:1: error: unknown type name 'BaseType_t'
+ 2870 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2870:73: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2870 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      |                                                                         ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2872:47: error: unknown type name 'TickType_t'
+ 2872 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2872:71: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2872 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2882:1: error: expected declaration specifiers before 'portDONT_DISCARD'
+ 2882 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2888:1: error: unknown type name 'TickType_t'
+ 2888 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2888:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2888 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2893:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2893 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2899:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2899 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2905:1: error: unknown type name 'BaseType_t'
+ 2905 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2905:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2905 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2911:1: error: unknown type name 'BaseType_t'
+ 2911 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2911:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2911 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2917:1: error: unknown type name 'BaseType_t'
+ 2917 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2917:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2917 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2927:43: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2927 | void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,
+      |                                           ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2928:43: error: unknown type name 'UBaseType_t'
+ 2928 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2933:1: error: unknown type name 'UBaseType_t'
+ 2933 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2933:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2933 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2939:26: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2939 | void vTaskSetTaskNumber( TaskHandle_t xTask,
+      |                          ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2940:32: error: unknown type name 'UBaseType_t'
+ 2940 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2950:21: error: unknown type name 'TickType_t'
+ 2950 | void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                     ^~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2966:1: error: expected declaration specifiers before 'eSleepModeStatus'
+ 2966 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2972:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2972 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2978:36: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2978 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:11,
+                 from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:3:
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:315:3: error: storage class specified for parameter 'imaxdiv_t'
+  315 | } imaxdiv_t;
+      |   ^~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:323:18: error: storage class specified for parameter 'imaxabs'
+  323 | extern intmax_t  imaxabs(intmax_t);
+      |                  ^~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:324:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'imaxdiv'
+  324 | extern imaxdiv_t imaxdiv(intmax_t __numer, intmax_t __denomer);
+      |                  ^~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:325:18: error: storage class specified for parameter 'strtoimax'
+  325 | extern intmax_t  strtoimax(const char *__restrict, char **__restrict, int);
+      |                  ^~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:326:18: error: storage class specified for parameter '_strtoimax_r'
+  326 | extern intmax_t  _strtoimax_r(struct _reent *, const char *__restrict, char **__restrict, int);
+      |                  ^~~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:327:18: error: storage class specified for parameter 'strtoumax'
+  327 | extern uintmax_t strtoumax(const char *__restrict, char **__restrict, int);
+      |                  ^~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:328:18: error: storage class specified for parameter '_strtoumax_r'
+  328 | extern uintmax_t _strtoumax_r(struct _reent *, const char *__restrict, char **__restrict, int);
+      |                  ^~~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:329:18: error: storage class specified for parameter 'wcstoimax'
+  329 | extern intmax_t  wcstoimax(const wchar_t *__restrict, wchar_t **__restrict, int);
+      |                  ^~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:330:18: error: storage class specified for parameter '_wcstoimax_r'
+  330 | extern intmax_t  _wcstoimax_r(struct _reent *, const wchar_t *__restrict, wchar_t **__restrict, int);
+      |                  ^~~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:331:18: error: storage class specified for parameter 'wcstoumax'
+  331 | extern uintmax_t wcstoumax(const wchar_t *__restrict, wchar_t **__restrict, int);
+      |                  ^~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:332:18: error: storage class specified for parameter '_wcstoumax_r'
+  332 | extern uintmax_t _wcstoumax_r(struct _reent *, const wchar_t *__restrict, wchar_t **__restrict, int);
+      |                  ^~~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:335:18: error: storage class specified for parameter 'strtoimax_l'
+  335 | extern intmax_t  strtoimax_l(const char *__restrict, char **_restrict, int, locale_t);
+      |                  ^~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:336:18: error: storage class specified for parameter 'strtoumax_l'
+  336 | extern uintmax_t strtoumax_l(const char *__restrict, char **_restrict, int, locale_t);
+      |                  ^~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:337:18: error: storage class specified for parameter 'wcstoimax_l'
+  337 | extern intmax_t  wcstoimax_l(const wchar_t *__restrict, wchar_t **_restrict, int, locale_t);
+      |                  ^~~~~~~~~~~
+/home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:338:18: error: storage class specified for parameter 'wcstoumax_l'
+  338 | extern uintmax_t wcstoumax_l(const wchar_t *__restrict, wchar_t **_restrict, int, locale_t);
+      |                  ^~~~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/esp_rom/include/esp_rom_sys.h:12,
+                 from /home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:13:
+/home/gabri/PROGRAMMING/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:54:3: error: storage class specified for parameter 'soc_reset_reason_t'
+   54 | } soc_reset_reason_t;
+      |   ^~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/esp_rom/include/esp_rom_sys.h:119:1: error: expected declaration specifiers before 'soc_reset_reason_t'
+  119 | soc_reset_reason_t esp_rom_get_reset_reason(int cpu_no);
+      | ^~~~~~~~~~~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_config.h:13,
+                 from /home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:14:
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_level.h:28:3: error: storage class specified for parameter 'esp_log_level_t'
+   28 | } esp_log_level_t;
+      |   ^~~~~~~~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/newlib/platform_include/assert.h:15,
+                 from /home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h:458,
+                 from /home/gabri/PROGRAMMING/esp-idf/components/newlib/platform_include/sys/reent.h:15,
+                 from /home/gabri/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:60,
+                 from /home/gabri/PROGRAMMING/esp-idf/components/newlib/platform_include/stdio.h:10,
+                 from /home/gabri/PROGRAMMING/esp-idf/components/esp_common/include/esp_err.h:10,
+                 from /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.h:5:
+/home/gabri/PROGRAMMING/esp-idf/components/esp_common/include/esp_assert.h:13:27: error: expected declaration specifiers before '_Static_assert'
+   13 | #define ESP_STATIC_ASSERT static_assert
+      |                           ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_level.h:36:1: note: in expansion of macro 'ESP_STATIC_ASSERT'
+   36 | ESP_STATIC_ASSERT(ESP_LOG_MAX <= ESP_LOG_LEVEL_MASK, "Log level items of esp_log_level_t must fit ESP_LOG_LEVEL_MASK");
+      | ^~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_level.h:107:1: error: expected declaration specifiers before '__attribute__'
+  107 | __attribute__((always_inline))
+      | ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_level.h:168:41: error: expected declaration specifiers or '...' before 'esp_log_level_t'
+  168 | void esp_log_level_set(const char* tag, esp_log_level_t level);
+      |                                         ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_level.h:180:1: error: expected declaration specifiers before 'esp_log_level_t'
+  180 | esp_log_level_t esp_log_level_get(const char* tag);
+      | ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_config.h:95:13: error: expected specifier-qualifier-list before 'esp_log_level_t'
+   95 |             esp_log_level_t log_level: ESP_LOG_LEVEL_LEN; /*!< Log level */
+      |             ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_config.h:104:3: error: storage class specified for parameter 'esp_log_config_t'
+  104 | } esp_log_config_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/esp_common/include/esp_assert.h:13:27: error: expected declaration specifiers before '_Static_assert'
+   13 | #define ESP_STATIC_ASSERT static_assert
+      |                           ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_config.h:112:1: note: in expansion of macro 'ESP_STATIC_ASSERT'
+  112 | ESP_STATIC_ASSERT(ESP_LOG_OFFSET_CONSTRAINED_ENV == ESP_LOG_LEVEL_LEN, "The log level should not overlap the following fields in esp_log_config_t");
+      | ^~~~~~~~~~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:17:
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_buffer.h:30:90: error: expected declaration specifiers or '...' before 'esp_log_level_t'
+   30 | void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
+      |                                                                                          ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_buffer.h:45:91: error: expected declaration specifiers or '...' before 'esp_log_level_t'
+   45 | void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
+      |                                                                                           ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_buffer.h:62:94: error: expected declaration specifiers or '...' before 'esp_log_level_t'
+   62 | void esp_log_buffer_hexdump_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
+      |                                                                                              ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_buffer.h:156:1: error: expected declaration specifiers before '__attribute__'
+  156 | __attribute__((deprecated("Use 'ESP_LOG_BUFFER_HEX' instead")))
+      | ^~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_buffer.h:167:1: error: expected declaration specifiers before '__attribute__'
+  167 | __attribute__((deprecated("Use 'ESP_LOG_BUFFER_CHAR' instead")))
+      | ^~~~~~~~~~~~~
+In file included from /home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:19:
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_write.h:17:15: error: storage class specified for parameter 'vprintf_like_t'
+   17 | typedef int (*vprintf_like_t)(const char *, va_list);
+      |               ^~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_write.h:33:1: error: expected declaration specifiers before 'vprintf_like_t'
+   33 | vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
+      | ^~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_write.h:51:20: error: expected declaration specifiers or '...' before 'esp_log_level_t'
+   51 | void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__((format(printf, 3, 4)));
+      |                    ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log_write.h:68:21: error: expected declaration specifiers or '...' before 'esp_log_level_t'
+   68 | void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
+      |                     ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:36:14: error: expected declaration specifiers or '...' before 'esp_log_config_t'
+   36 | void esp_log(esp_log_config_t config, const char* tag, const char* format, ...);
+      |              ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/log/include/esp_log.h:48:17: error: expected declaration specifiers or '...' before 'esp_log_config_t'
+   48 | void esp_log_va(esp_log_config_t config, const char *tag, const char *format, va_list args);
+      |                 ^~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:5:20: error: storage class specified for parameter 'TAG'
+    5 | static const char *TAG = "BH1750";
+      |                    ^~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:5:1: error: parameter 'TAG' is initialized
+    5 | static const char *TAG = "BH1750";
+      | ^~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:6:22: error: storage class specified for parameter 'current_mode'
+    6 | static bh1750_mode_t current_mode;
+      |                      ^~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:8:23: error: unknown type name 'i2c_master_dev_handle_t'
+    8 | esp_err_t bh1750_init(i2c_master_dev_handle_t dev, bh1750_mode_t mode) {
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:20:29: error: unknown type name 'i2c_master_dev_handle_t'
+   20 | esp_err_t bh1750_read_light(i2c_master_dev_handle_t dev, float *lux) {
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:6: error: old-style parameter declarations in prototyped function definition
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |      ^~~~~~~~~~~~~~~
+/home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/main/bh1750_mio.c:31: error: expected '{' at end of input
+ninja: build stopped: subcommand failed.

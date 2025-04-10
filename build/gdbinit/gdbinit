@@ -1,0 +1,2 @@
+source /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/gdbinit/symbols
+source /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/gdbinit/connect

@@ -1,0 +1,21 @@
+Command: ninja flash
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/gabri/.espressif/python_env/idf5.5_py3.11_env/lib/python3.11/site-packages/esptool/__main__.py", line 9, in <module>
+    esptool._main()
+  File "/home/gabri/.espressif/python_env/idf5.5_py3.11_env/lib/python3.11/site-packages/esptool/__init__.py", line 1349, in _main
+    main()
+  File "/home/gabri/.espressif/python_env/idf5.5_py3.11_env/lib/python3.11/site-packages/esptool/__init__.py", line 1057, in main
+    operation_func(esp, args)
+  File "/home/gabri/.espressif/python_env/idf5.5_py3.11_env/lib/python3.11/site-packages/esptool/cmds.py", line 505, in write_flash
+    flash_end = min(set_flash_size, flash_end) if set_flash_size else flash_end
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+CMake Error at run_serial_tool.cmake:67 (message):
+  
+  /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python;;/home/gabri/PROGRAMMING/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32
+  failed.
+
+
+

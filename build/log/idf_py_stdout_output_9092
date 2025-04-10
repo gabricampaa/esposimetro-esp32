@@ -1,0 +1,107 @@
+Command: /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/PROVE-ESPOSIMETRO-MIO.elf /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/bootloader.elf -m '/home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/gabri/PROGRAMMING/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c0ach ( 49324) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c0d4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c0f8 vaddr=3ffb0000 size=02724h ( 10020) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e824 vaddr=40080000 size=017f4h (  6132) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=185a4h ( 99748) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=000385cc vaddr=400817f4 size=0c000h ( 49152) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (208) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (214) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (219) app_init: ELF file SHA256:  70c797937...[0m
+[0;32mI (224) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (230) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (234) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (238) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (242) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFB3010 len 0002CFF0 (179 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (263) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 4008D7F4 len 0001280C (74 KiB): IRAM[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (293) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (301) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) MIEI_TEST---: INTERFACE is i2c[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SDA_GPIO=22[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SCL_GPIO=21[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_RESET_GPIO=15[0m
+[0;32mI (321) SSD1306: New i2c driver is used[0m
+[0;32mI (321) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) MIEI_TEST---: Panel is 128x64[0m
+[0;32mI (381) SSD1306: OLED configured successfully[0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+X: 2961, Y: 3022, Button: Released
+X: 2949, Y: 3028, Button: Released
+X: 2953, Y: 3056, Button: Released
+X: 2954, Y: 3010, Button: Released
+X: 2959, Y: 3067, Button: Released
+X: 2975, Y: 3056, Button: Released
+X: 2959, Y: 3026, Button: Released
+X: 3018, Y: 3088, Button: Released
+X: 2989, Y: 3053, Button: Released
+X: 2816, Y: 2962, Button: Released
+X: 2955, Y: 2999, Button: Released
+X: 0, Y: 3101, Button: Released
+[0;33mW (9291) MIEI_TEST---: vai a sx[0m
+X: 3189, Y: 3295, Button: Released
+X: 3313, Y: 3367, Button: Released
+X: 3281, Y: 3358, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (10661) MIEI_TEST---: vai a dx[0m
+X: 3177, Y: 3193, Button: Released
+X: 3319, Y: 3427, Button: Released
+X: 3164, Y: 3250, Button: Released
+X: 3232, Y: 3323, Button: Released
+X: 3378, Y: 3518, Button: Released
+X: 3353, Y: 3429, Button: Released
+X: 3264, Y: 3358, Button: Released
+X: 3312, Y: 3342, Button: Released
+X: 3349, Y: 3457, Button: Released
+X: 3408, Y: 3477, Button: Released
+X: 3459, Y: 3564, Button: Released
+X: 3295, Y: 3345, Button: Released
+X: 3286, Y: 3334, Button: Released
+X: 3343, Y: 3408, Button: Released
+X: 3354, Y: 3491, Button: Released
+X: 3367, Y: 3477, Button: Released
+X: 3369, Y: 3445, Button: Released
+X: 3295, Y: 3408, Button: Released
+X: 3329, Y: 3439, Button: Released
+X: 3307, Y: 3395, Button: Released
+X: 3346, Y: 3411, Button: Released
+X: 3310, Y: 3414, Button: Released
+X: 3301, Y: 3398, Button: Released

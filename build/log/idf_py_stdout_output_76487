@@ -1,0 +1,290 @@
+Command: /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/PROVE-ESPOSIMETRO-MIO.elf /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/bootloader.elf -m '/home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/gabri/PROGRAMMING/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c0bch ( 49340) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c0e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c108 vaddr=3ffb0000 size=02724h ( 10020) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e834 vaddr=40080000 size=017e4h (  6116) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=185a8h ( 99752) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=000385d0 vaddr=400817e4 size=0c010h ( 49168) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (208) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (214) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (220) app_init: ELF file SHA256:  bfbc0299f...[0m
+[0;32mI (224) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (230) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (234) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (238) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (242) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFB3010 len 0002CFF0 (179 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 4008D7F4 len 0001280C (74 KiB): IRAM[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (293) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (301) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) MIEI_TEST---: INTERFACE is i2c[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SDA_GPIO=22[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SCL_GPIO=21[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_RESET_GPIO=15[0m
+[0;32mI (321) SSD1306: New i2c driver is used[0m
+[0;32mI (321) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) MIEI_TEST---: Panel is 128x64[0m
+[0;32mI (381) SSD1306: OLED configured successfully[0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[1;31mE (1401) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (1401) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (1401) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (1401) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (1411) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+[1;31mE (2491) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (2491) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (2491) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (2491) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (2501) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+[1;31mE (3581) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (3581) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (3581) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (3581) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (3591) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+[1;31mE (4671) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (4671) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (4671) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (4671) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (4681) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+[1;31mE (5761) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (5761) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (5761) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (5761) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (5771) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+[1;31mE (6851) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (6851) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (6851) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (6851) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (6861) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+X: 2976, Y: 3038, Button: Released
+X: 2960, Y: 3032, Button: Released
+X: 2954, Y: 3038, Button: Released
+X: 2959, Y: 3027, Button: Released
+X: 2957, Y: 3033, Button: Released
+X: 2951, Y: 3043, Button: Released
+X: 2947, Y: 3041, Button: Released
+X: 0, Y: 2878, Button: Released
+[0;33mW (8621) MIEI_TEST---: vai a sx[0m
+[1;31mE (8621) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (8621) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (8621) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (8621) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (8631) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+X: 624, Y: 2838, Button: Released
+X: 2871, Y: 2935, Button: Released
+X: 2897, Y: 2974, Button: Released
+X: 2922, Y: 3005, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (10141) MIEI_TEST---: vai a dx[0m
+[1;31mE (10141) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (10141) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (10141) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (10141) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (10151) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+[1;31mE (10661) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (10661) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (10661) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed[0m
+[1;31mE (10661) i2c.master: i2c_master_multi_buffer_transmit(1193): I2C transaction failed[0m
+[1;31mE (10671) SSD1306: Could not write to device [0x3c at 0]: 259 (ESP_ERR_INVALID_STATE)[0m
+X: 2704, Y: 2717, Button: Released
+X: 2940, Y: 3024, Button: Released
+X: 2972, Y: 3061, Button: Released
+X: 2929, Y: 2982, Button: Released
+X: 2960, Y: 3035, Button: Released
+X: 2963, Y: 3034, Button: Released
+X: 2927, Y: 2993, Button: Released
+X: 2807, Y: 2925, Button: Released
+X: 2909, Y: 2967, Button: Released
+X: 2960, Y: 3008, Button: Released
+X: 2961, Y: 3027, Button: Released
+X: 2965, Y: 3043, Button: Released
+X: 2976, Y: 3053, Button: Released
+X: 2978, Y: 3059, Button: Released
+X: 2971, Y: 3065, Button: Released
+X: 2943, Y: 3019, Button: Released
+X: 2933, Y: 3008, Button: Released
+X: 2930, Y: 3012, Button: Released
+X: 2945, Y: 3015, Button: Released
+X: 2775, Y: 2833, Button: Released
+X: 2700, Y: 2798, Button: Released
+X: 2945, Y: 3034, Button: Released
+X: 2783, Y: 2859, Button: Released
+X: 2875, Y: 2944, Button: Released
+X: 2885, Y: 2986, Button: Released
+X: 2910, Y: 2991, Button: Released
+X: 2875, Y: 2933, Button: Released
+X: 2743, Y: 2830, Button: Released
+X: 2859, Y: 2928, Button: Released
+X: 2769, Y: 2850, Button: Released
+X: 2928, Y: 3009, Button: Released
+X: 2897, Y: 2992, Button: Released
+X: 2857, Y: 2943, Button: Released
+X: 2832, Y: 2906, Button: Released
+X: 2933, Y: 2987, Button: Released
+X: 2928, Y: 3002, Button: Released
+X: 2897, Y: 3009, Button: Released
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c0bch ( 49340) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c0e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c108 vaddr=3ffb0000 size=02724h ( 10020) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e834 vaddr=40080000 size=017e4h (  6116) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=185a8h ( 99752) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=000385d0 vaddr=400817e4 size=0c010h ( 49168) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (208) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (214) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (220) app_init: ELF file SHA256:  bfbc0299f...[0m
+[0;32mI (224) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (230) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (234) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (238) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (242) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFB3010 len 0002CFF0 (179 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 4008D7F4 len 0001280C (74 KiB): IRAM[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (293) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (301) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) MIEI_TEST---: INTERFACE is i2c[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SDA_GPIO=22[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SCL_GPIO=21[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_RESET_GPIO=15[0m
+[0;32mI (321) SSD1306: New i2c driver is used[0m
+[0;32mI (321) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) MIEI_TEST---: Panel is 128x64[0m
+[0;32mI (381) SSD1306: OLED configured successfully[0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+X: 2963, Y: 3027, Button: Released
+X: 2967, Y: 3024, Button: Released
+X: 2954, Y: 3024, Button: Released
+X: 2960, Y: 3023, Button: Released
+X: 2965, Y: 3027, Button: Released
+X: 2950, Y: 3031, Button: Released
+X: 0, Y: 2996, Button: Released
+[0;33mW (8301) MIEI_TEST---: vai a sx[0m
+X: 0, Y: 3038, Button: Released
+[0;33mW (9001) MIEI_TEST---: vai a sx[0m
+X: 0, Y: 3031, Button: Released
+[0;33mW (9701) MIEI_TEST---: vai a sx[0m
+X: 0, Y: 3021, Button: Released
+[0;33mW (10401) MIEI_TEST---: vai a sx[0m
+X: 2928, Y: 2978, Button: Released
+X: 2937, Y: 2998, Button: Released
+X: 2939, Y: 3018, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (11701) MIEI_TEST---: vai a dx[0m
+X: 2946, Y: 3041, Button: Released
+X: 2960, Y: 3026, Button: Released
+X: 2965, Y: 3008, Button: Released
+X: 2960, Y: 3035, Button: Released
+X: 2944, Y: 3033, Button: Released
+X: 2958, Y: 3024, Button: Released
+X: 2926, Y: 3007, Button: Released
+X: 2914, Y: 2981, Button: Released
+X: 2943, Y: 3024, Button: Released
+X: 2866, Y: 0, Button: Released
+X: 2928, Y: 0, Button: Released
+X: 2896, Y: 0, Button: Released
+X: 2719, Y: 2895, Button: Released
+X: 2919, Y: 3017, Button: Released
+X: 2908, Y: 3000, Button: Released
+X: 0, Y: 3028, Button: Released
+[0;33mW (15401) MIEI_TEST---: vai a sx[0m
+X: 2945, Y: 3039, Button: Released
+X: 2959, Y: 3019, Button: Released
+X: 0, Y: 3006, Button: Released
+[0;33mW (16501) MIEI_TEST---: vai a sx[0m
+X: 2941, Y: 2961, Button: Released
+X: 2887, Y: 2992, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (17601) MIEI_TEST---: vai a dx[0m
+X: 2960, Y: 3035, Button: Released
+X: 2981, Y: 3010, Button: Released
+X: 2912, Y: 2989, Button: Released
+X: 2897, Y: 2949, Button: Released
+X: 2930, Y: 3025, Button: Released
+X: 2918, Y: 2967, Button: Released
+X: 2928, Y: 2991, Button: Released
+X: 2944, Y: 2992, Button: Released
+X: 2913, Y: 2995, Button: Released
+X: 2923, Y: 2994, Button: Released
+X: 2913, Y: 2966, Button: Released
+X: 2917, Y: 2999, Button: Released
+X: 2942, Y: 3012, Button: Released
+X: 2905, Y: 2999, Button: Released
+X: 2949, Y: 2981, Button: Released
+X: 2931, Y: 3018, Button: Released
+X: 2859, Y: 2977, Button: Released
+X: 2908, Y: 2954, Button: Released

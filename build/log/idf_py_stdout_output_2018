@@ -1,0 +1,18 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/esp-idf/esptool_py && /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/bootloader.bin
+Bootloader binary size 0x6650 bytes. 0x9b0 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bh1750_mio.c.obj
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable PROVE-ESPOSIMETRO-MIO.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.9.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/PROVE-ESPOSIMETRO-MIO.bin
+[9/9] cd /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/esp-idf/esptool_py && /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/partition_table/partition-table.bin /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/PROVE-ESPOSIMETRO-MIO.bin
+PROVE-ESPOSIMETRO-MIO.bin binary size 0x2ee00 bytes. Smallest app partition is 0x100000 bytes. 0xd1200 bytes (82%) free.

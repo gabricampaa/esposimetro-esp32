@@ -1,0 +1,3465 @@
+Command: /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/PROVE-ESPOSIMETRO-MIO.elf /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/bootloader.elf -m '/home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/gabri/PROGRAMMING/esp-idf/tools/idf.py'
+0cff0h ( 53232) map
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (266) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+I (31) boot: chip revision: v3.1
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+I (227) app_init: ELF file SHA256:  0d7a99669...
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+I (202) cpu_start: Multicore app
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+I (31) boot: chip revision: v3.1
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+I (285) spi_flash: flash io: dio
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+I (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (211) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+I (216) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty
+[0;32mI (222) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (227) app_init: ELF file SHA256:  0d7a99669...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (241) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (245) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (260) heap_init: At 3FFB3050 len 0002CFB0 (179 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008EB28 len 000114D8 (69 KiB): IRAM[0m
+[0;32mI (283) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (288) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (300) i2c: CONFLICT! driver_ng is not allowed to be used with this old driver[0m
+
+abort() was called at PC 0x400dc804 on core 0
+
+
+Backtrace: 0x40081949:0x3ffe3b30 0x40086e01:0x3ffe3b50 0x4008cf0d:0x3ffe3b70 0x400dc804:0x3ffe3be0 0x400d1e07:0x3ffe3c00 0x400d1eee:0x3ffe3c20 0x400814c2:0x3ffe3c40 0x40079776:0x3ffe3c90 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 0d7a99669
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cff0h ( 53232) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d018 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d03c vaddr=3ffb0000 size=02754h ( 10068) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001f798 vaddr=40080000 size=00880h (  2176) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19e5ch (106076) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039e84 vaddr=40080880 size=0e2a8h ( 58024) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10

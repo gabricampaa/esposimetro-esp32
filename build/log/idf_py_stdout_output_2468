@@ -1,0 +1,575 @@
+Command: /home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python /home/gabri/PROGRAMMING/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/PROVE-ESPOSIMETRO-MIO.elf /home/gabri/PROGRAMMING/esp-idf/PROJ/PROVE-ESPOSIMETRO-MIO/build/bootloader/bootloader.elf -m '/home/gabri/.espressif/python_env/idf5.5_py3.11_env/bin/python' '/home/gabri/PROGRAMMING/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6368
+load:0x40078000,len:15880
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2182-ga6c3a9cbbb-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  7 2025 00:07:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c0bch ( 49340) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c0e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c108 vaddr=3ffb0000 size=02724h ( 10020) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e834 vaddr=40080000 size=017e4h (  6116) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=185a8h ( 99752) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=000385d0 vaddr=400817e4 size=0c010h ( 49168) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     PROVE-ESPOSIMETRO-MIO[0m
+[0;32mI (208) app_init: App version:      v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (214) app_init: Compile time:     Apr  7 2025 00:06:52[0m
+[0;32mI (220) app_init: ELF file SHA256:  a90e00f0e...[0m
+[0;32mI (224) app_init: ESP-IDF:          v5.5-dev-2182-ga6c3a9cbbb-dirty[0m
+[0;32mI (230) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (234) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (238) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (242) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFB3010 len 0002CFF0 (179 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 4008D7F4 len 0001280C (74 KiB): IRAM[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (293) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (301) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) MIEI_TEST---: INTERFACE is i2c[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SDA_GPIO=22[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_SCL_GPIO=21[0m
+[0;32mI (311) MIEI_TEST---: CONFIG_RESET_GPIO=15[0m
+[0;32mI (321) SSD1306: New i2c driver is used[0m
+[0;32mI (321) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) MIEI_TEST---: Panel is 128x64[0m
+[0;32mI (381) SSD1306: OLED configured successfully[0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+X: 2800, Y: 2864, Button: Released
+X: 2818, Y: 2851, Button: Released
+X: 2797, Y: 2880, Button: Released
+X: 2819, Y: 2885, Button: Released
+X: 2797, Y: 2865, Button: Released
+X: 2822, Y: 2925, Button: Released
+X: 2851, Y: 2886, Button: Released
+X: 2781, Y: 2876, Button: Released
+X: 2827, Y: 2879, Button: Released
+X: 2774, Y: 2848, Button: Released
+X: 2739, Y: 2799, Button: Released
+X: 2714, Y: 2755, Button: Released
+X: 2729, Y: 2765, Button: Released
+X: 2726, Y: 2815, Button: Released
+X: 2736, Y: 2797, Button: Released
+X: 2753, Y: 2782, Button: Released
+X: 2736, Y: 2810, Button: Released
+X: 2765, Y: 2821, Button: Released
+X: 2768, Y: 2811, Button: Released
+X: 2774, Y: 2835, Button: Released
+X: 2768, Y: 2818, Button: Released
+X: 2736, Y: 2852, Button: Released
+X: 2755, Y: 2839, Button: Released
+X: 2771, Y: 2834, Button: Released
+X: 2685, Y: 2815, Button: Released
+X: 2719, Y: 2811, Button: Released
+X: 2735, Y: 2827, Button: Released
+X: 2783, Y: 2855, Button: Released
+X: 2753, Y: 2825, Button: Released
+X: 2765, Y: 2839, Button: Released
+X: 2795, Y: 2829, Button: Released
+X: 2732, Y: 2834, Button: Released
+X: 2748, Y: 2823, Button: Released
+X: 2752, Y: 2823, Button: Released
+X: 2749, Y: 2817, Button: Released
+X: 2757, Y: 2836, Button: Released
+X: 2730, Y: 2778, Button: Released
+X: 2711, Y: 2761, Button: Released
+X: 2640, Y: 2801, Button: Released
+X: 2711, Y: 2800, Button: Released
+X: 2721, Y: 2786, Button: Released
+X: 2703, Y: 2771, Button: Released
+X: 2757, Y: 2733, Button: Released
+X: 2706, Y: 2765, Button: Released
+X: 2671, Y: 2779, Button: Released
+X: 2766, Y: 2851, Button: Released
+X: 2822, Y: 2865, Button: Released
+X: 2831, Y: 2907, Button: Released
+X: 2832, Y: 2909, Button: Released
+X: 2811, Y: 2925, Button: Released
+X: 2790, Y: 2850, Button: Released
+X: 2773, Y: 2815, Button: Released
+X: 2790, Y: 2813, Button: Released
+X: 2735, Y: 2825, Button: Released
+X: 2737, Y: 2811, Button: Released
+X: 2673, Y: 2774, Button: Released
+X: 2715, Y: 2779, Button: Released
+X: 2693, Y: 2778, Button: Released
+X: 2730, Y: 2773, Button: Released
+X: 2733, Y: 2775, Button: Released
+X: 2741, Y: 2810, Button: Released
+X: 2727, Y: 2810, Button: Released
+X: 2727, Y: 2793, Button: Released
+X: 2693, Y: 2788, Button: Released
+X: 2724, Y: 2783, Button: Released
+X: 2746, Y: 2816, Button: Released
+X: 2741, Y: 2795, Button: Released
+X: 2768, Y: 2839, Button: Released
+X: 2752, Y: 2837, Button: Released
+X: 2757, Y: 2837, Button: Released
+X: 2749, Y: 2830, Button: Released
+X: 2713, Y: 2797, Button: Released
+X: 2704, Y: 2784, Button: Released
+X: 2705, Y: 2786, Button: Released
+X: 2731, Y: 2813, Button: Released
+X: 2783, Y: 2848, Button: Released
+X: 2739, Y: 2881, Button: Released
+X: 2787, Y: 2895, Button: Released
+X: 2830, Y: 2892, Button: Released
+X: 2800, Y: 2864, Button: Released
+X: 2807, Y: 2871, Button: Released
+X: 2819, Y: 2896, Button: Released
+X: 2800, Y: 2886, Button: Released
+X: 2832, Y: 2891, Button: Released
+X: 2827, Y: 2896, Button: Released
+X: 2827, Y: 2890, Button: Released
+X: 2795, Y: 2875, Button: Released
+X: 2799, Y: 2875, Button: Released
+X: 2782, Y: 2878, Button: Released
+X: 2794, Y: 2865, Button: Released
+X: 2767, Y: 2805, Button: Released
+X: 2797, Y: 2851, Button: Released
+X: 2815, Y: 2903, Button: Released
+X: 2795, Y: 2864, Button: Released
+X: 2789, Y: 2865, Button: Released
+X: 2832, Y: 2865, Button: Released
+X: 2782, Y: 2850, Button: Released
+X: 2802, Y: 2855, Button: Released
+X: 2791, Y: 2847, Button: Released
+X: 2801, Y: 2847, Button: Released
+X: 2783, Y: 2885, Button: Released
+X: 2775, Y: 2832, Button: Released
+X: 2797, Y: 2891, Button: Released
+X: 2759, Y: 2850, Button: Released
+X: 2791, Y: 2815, Button: Released
+X: 2784, Y: 2862, Button: Released
+X: 2809, Y: 2879, Button: Released
+X: 2832, Y: 2869, Button: Released
+X: 2816, Y: 2889, Button: Released
+X: 2817, Y: 2896, Button: Released
+X: 2830, Y: 2883, Button: Released
+X: 2818, Y: 2899, Button: Released
+X: 2814, Y: 2810, Button: Released
+X: 2830, Y: 2848, Button: Released
+X: 2793, Y: 2870, Button: Released
+X: 2817, Y: 2915, Button: Released
+X: 2757, Y: 2842, Button: Released
+X: 2775, Y: 2807, Button: Released
+X: 2725, Y: 2816, Button: Released
+X: 2731, Y: 2829, Button: Released
+X: 2789, Y: 2864, Button: Released
+X: 2820, Y: 2893, Button: Released
+X: 2809, Y: 2905, Button: Released
+X: 2813, Y: 2875, Button: Released
+X: 2855, Y: 2910, Button: Released
+X: 2864, Y: 2944, Button: Released
+X: 2868, Y: 2970, Button: Released
+X: 2893, Y: 2930, Button: Released
+X: 2885, Y: 2945, Button: Released
+X: 2806, Y: 2954, Button: Released
+X: 2832, Y: 2914, Button: Released
+X: 2894, Y: 3006, Button: Released
+X: 2897, Y: 2961, Button: Released
+X: 2896, Y: 2971, Button: Released
+X: 2887, Y: 2954, Button: Released
+X: 2864, Y: 2943, Button: Released
+X: 2869, Y: 2945, Button: Released
+X: 2853, Y: 2946, Button: Released
+X: 2855, Y: 2925, Button: Released
+X: 2874, Y: 2958, Button: Released
+X: 2864, Y: 2917, Button: Released
+X: 2867, Y: 2897, Button: Released
+X: 2879, Y: 2955, Button: Released
+X: 2865, Y: 2922, Button: Released
+X: 2844, Y: 2929, Button: Released
+X: 2880, Y: 2958, Button: Released
+X: 2880, Y: 2927, Button: Released
+X: 2865, Y: 2944, Button: Released
+X: 2819, Y: 2932, Button: Released
+X: 2815, Y: 2907, Button: Released
+X: 2836, Y: 2901, Button: Released
+X: 2822, Y: 2929, Button: Released
+X: 2838, Y: 2902, Button: Released
+X: 2849, Y: 2927, Button: Released
+X: 2844, Y: 2897, Button: Released
+X: 2827, Y: 2895, Button: Released
+X: 2765, Y: 2772, Button: Released
+X: 2786, Y: 2888, Button: Released
+X: 2768, Y: 2832, Button: Released
+X: 2779, Y: 2817, Button: Released
+X: 2757, Y: 2839, Button: Released
+X: 2757, Y: 2819, Button: Released
+X: 2741, Y: 2843, Button: Released
+X: 2750, Y: 2827, Button: Released
+X: 2721, Y: 2832, Button: Released
+X: 2734, Y: 2816, Button: Released
+X: 2736, Y: 2782, Button: Released
+X: 2751, Y: 2793, Button: Released
+X: 2729, Y: 2800, Button: Released
+X: 2718, Y: 2794, Button: Released
+X: 2732, Y: 2835, Button: Released
+X: 2750, Y: 2833, Button: Released
+X: 2785, Y: 2837, Button: Released
+X: 2747, Y: 2832, Button: Released
+X: 2803, Y: 2875, Button: Released
+X: 2811, Y: 2846, Button: Released
+X: 2833, Y: 2873, Button: Released
+X: 2773, Y: 2831, Button: Released
+X: 2739, Y: 2826, Button: Released
+X: 2757, Y: 2817, Button: Released
+X: 2770, Y: 2832, Button: Released
+X: 2768, Y: 2832, Button: Released
+X: 2621, Y: 2845, Button: Released
+X: 2752, Y: 2796, Button: Released
+X: 2738, Y: 2783, Button: Released
+X: 2726, Y: 2784, Button: Released
+X: 2687, Y: 2815, Button: Released
+X: 2778, Y: 2825, Button: Released
+X: 2759, Y: 2820, Button: Released
+X: 2779, Y: 2823, Button: Released
+X: 2805, Y: 2865, Button: Released
+X: 2802, Y: 2883, Button: Released
+X: 2800, Y: 2833, Button: Released
+X: 2795, Y: 2853, Button: Released
+X: 2791, Y: 2846, Button: Released
+X: 2733, Y: 2838, Button: Released
+X: 2657, Y: 2757, Button: Released
+X: 2706, Y: 2807, Button: Released
+X: 2694, Y: 2752, Button: Released
+X: 2683, Y: 2778, Button: Released
+X: 2673, Y: 2795, Button: Released
+X: 2688, Y: 2771, Button: Released
+X: 2746, Y: 2852, Button: Released
+X: 2768, Y: 2839, Button: Released
+X: 2800, Y: 2848, Button: Released
+X: 2799, Y: 2897, Button: Released
+X: 2835, Y: 2866, Button: Released
+X: 2800, Y: 2871, Button: Released
+X: 2813, Y: 2864, Button: Released
+X: 2674, Y: 2854, Button: Released
+X: 2770, Y: 2853, Button: Released
+X: 2763, Y: 2848, Button: Released
+X: 2773, Y: 2807, Button: Released
+X: 2812, Y: 2836, Button: Released
+X: 2823, Y: 2852, Button: Released
+X: 2832, Y: 2934, Button: Released
+X: 2847, Y: 2914, Button: Released
+X: 2847, Y: 2897, Button: Released
+X: 2863, Y: 2946, Button: Released
+X: 2839, Y: 2945, Button: Released
+X: 2849, Y: 2916, Button: Released
+X: 2890, Y: 2922, Button: Released
+X: 2829, Y: 2880, Button: Released
+X: 2833, Y: 2891, Button: Released
+X: 2861, Y: 2927, Button: Released
+X: 2865, Y: 2913, Button: Released
+X: 2874, Y: 2949, Button: Released
+X: 2876, Y: 2931, Button: Released
+X: 2862, Y: 2910, Button: Released
+X: 2831, Y: 2919, Button: Released
+X: 2847, Y: 2927, Button: Released
+X: 2851, Y: 2905, Button: Released
+X: 2866, Y: 2937, Button: Released
+X: 2889, Y: 2923, Button: Released
+X: 2832, Y: 2931, Button: Released
+X: 2813, Y: 2920, Button: Released
+X: 2768, Y: 2857, Button: Released
+X: 2800, Y: 2880, Button: Released
+X: 2831, Y: 2892, Button: Released
+X: 2795, Y: 2851, Button: Released
+X: 2767, Y: 2817, Button: Released
+X: 2749, Y: 2837, Button: Released
+X: 2763, Y: 2839, Button: Released
+X: 2748, Y: 2848, Button: Released
+X: 2762, Y: 2818, Button: Released
+X: 2769, Y: 2831, Button: Released
+X: 2768, Y: 2817, Button: Released
+X: 2789, Y: 2837, Button: Released
+X: 2769, Y: 2866, Button: Released
+X: 2784, Y: 2848, Button: Released
+X: 2736, Y: 2858, Button: Released
+X: 2819, Y: 2887, Button: Released
+X: 2837, Y: 2919, Button: Released
+X: 2857, Y: 2910, Button: Released
+X: 2867, Y: 2924, Button: Released
+X: 2851, Y: 2941, Button: Released
+X: 2876, Y: 2933, Button: Released
+X: 2869, Y: 2950, Button: Released
+X: 2866, Y: 2958, Button: Released
+X: 2882, Y: 2960, Button: Released
+X: 2867, Y: 2949, Button: Released
+X: 2866, Y: 2931, Button: Released
+X: 2851, Y: 2911, Button: Released
+X: 2755, Y: 2878, Button: Released
+X: 2816, Y: 2929, Button: Released
+X: 2816, Y: 2896, Button: Released
+X: 2811, Y: 2880, Button: Released
+X: 2842, Y: 2882, Button: Released
+X: 2800, Y: 2891, Button: Released
+X: 2800, Y: 2891, Button: Released
+X: 2836, Y: 2911, Button: Released
+X: 2835, Y: 2892, Button: Released
+X: 2832, Y: 2896, Button: Released
+X: 2816, Y: 2898, Button: Released
+X: 2832, Y: 2914, Button: Released
+X: 2848, Y: 2891, Button: Released
+X: 2800, Y: 2880, Button: Released
+X: 2751, Y: 2893, Button: Released
+X: 2846, Y: 2887, Button: Released
+X: 2833, Y: 2922, Button: Released
+X: 2845, Y: 2907, Button: Released
+X: 2845, Y: 2912, Button: Released
+X: 2813, Y: 2882, Button: Released
+X: 2812, Y: 2922, Button: Released
+X: 2837, Y: 2905, Button: Released
+X: 2833, Y: 2900, Button: Released
+X: 2832, Y: 2917, Button: Released
+X: 2845, Y: 2879, Button: Released
+X: 2823, Y: 2833, Button: Released
+X: 2779, Y: 2869, Button: Released
+X: 2752, Y: 2802, Button: Released
+X: 2789, Y: 2864, Button: Released
+X: 2797, Y: 2873, Button: Released
+X: 2743, Y: 2838, Button: Released
+X: 2755, Y: 2790, Button: Released
+X: 2690, Y: 2783, Button: Released
+X: 2718, Y: 2800, Button: Released
+X: 2704, Y: 2806, Button: Released
+X: 2733, Y: 2790, Button: Released
+X: 2725, Y: 2810, Button: Released
+X: 2704, Y: 2766, Button: Released
+X: 2710, Y: 2772, Button: Released
+X: 2714, Y: 2754, Button: Released
+X: 2606, Y: 2753, Button: Released
+X: 2590, Y: 2753, Button: Released
+X: 2666, Y: 2768, Button: Released
+X: 2687, Y: 2762, Button: Released
+X: 2682, Y: 2755, Button: Released
+X: 2715, Y: 2769, Button: Released
+X: 2720, Y: 2767, Button: Released
+X: 2704, Y: 2743, Button: Released
+X: 2738, Y: 2827, Button: Released
+X: 2712, Y: 2800, Button: Released
+X: 2737, Y: 2805, Button: Released
+X: 2728, Y: 2799, Button: Released
+X: 2767, Y: 2837, Button: Released
+X: 2763, Y: 2733, Button: Released
+X: 2715, Y: 2854, Button: Released
+X: 2781, Y: 2891, Button: Released
+X: 2807, Y: 2885, Button: Released
+X: 2804, Y: 2866, Button: Released
+X: 2781, Y: 2869, Button: Released
+X: 2814, Y: 2862, Button: Released
+X: 2802, Y: 2883, Button: Released
+X: 2801, Y: 2851, Button: Released
+X: 2830, Y: 2885, Button: Released
+X: 2819, Y: 2880, Button: Released
+X: 2795, Y: 2843, Button: Released
+X: 2791, Y: 2887, Button: Released
+X: 2803, Y: 2864, Button: Released
+X: 2729, Y: 2849, Button: Released
+X: 2848, Y: 2913, Button: Released
+X: 2787, Y: 2930, Button: Released
+X: 2847, Y: 2863, Button: Released
+X: 2812, Y: 2881, Button: Released
+X: 2803, Y: 2876, Button: Released
+X: 2794, Y: 2861, Button: Released
+X: 2799, Y: 2875, Button: Released
+X: 2802, Y: 2881, Button: Released
+X: 2810, Y: 2880, Button: Released
+X: 2783, Y: 2893, Button: Released
+X: 2816, Y: 2899, Button: Released
+X: 2829, Y: 2899, Button: Released
+X: 2741, Y: 2887, Button: Released
+X: 2782, Y: 2886, Button: Released
+X: 2832, Y: 2913, Button: Released
+X: 2843, Y: 2935, Button: Released
+X: 2834, Y: 2931, Button: Released
+X: 2820, Y: 2791, Button: Released
+X: 2859, Y: 2919, Button: Released
+X: 2839, Y: 2941, Button: Released
+X: 2847, Y: 2924, Button: Released
+X: 2864, Y: 2938, Button: Released
+X: 2854, Y: 2947, Button: Released
+X: 2837, Y: 2928, Button: Released
+X: 2842, Y: 2928, Button: Released
+X: 2836, Y: 2916, Button: Released
+X: 2791, Y: 2864, Button: Released
+X: 2832, Y: 2927, Button: Released
+X: 2823, Y: 2903, Button: Released
+X: 2815, Y: 2903, Button: Released
+X: 2793, Y: 2867, Button: Released
+X: 2770, Y: 2847, Button: Released
+X: 2774, Y: 2819, Button: Released
+X: 2793, Y: 2832, Button: Released
+X: 2787, Y: 2829, Button: Released
+X: 2786, Y: 2855, Button: Released
+X: 2800, Y: 2853, Button: Released
+X: 2778, Y: 2849, Button: Released
+X: 2762, Y: 2832, Button: Released
+X: 2663, Y: 2812, Button: Released
+X: 2711, Y: 2795, Button: Released
+X: 2732, Y: 2837, Button: Released
+X: 2723, Y: 2826, Button: Released
+X: 2781, Y: 2800, Button: Released
+X: 2723, Y: 2815, Button: Released
+X: 2704, Y: 2791, Button: Released
+X: 2725, Y: 2782, Button: Released
+X: 2714, Y: 2781, Button: Released
+X: 2711, Y: 2788, Button: Released
+X: 2706, Y: 2762, Button: Released
+X: 2719, Y: 2768, Button: Released
+X: 2719, Y: 2757, Button: Released
+X: 2714, Y: 2789, Button: Released
+X: 2688, Y: 2704, Button: Released
+X: 2741, Y: 2793, Button: Released
+X: 2736, Y: 2743, Button: Released
+X: 2719, Y: 2779, Button: Released
+X: 2718, Y: 2791, Button: Released
+X: 2727, Y: 2757, Button: Released
+X: 2723, Y: 2807, Button: Released
+X: 2766, Y: 2809, Button: Released
+X: 2754, Y: 2832, Button: Released
+X: 2737, Y: 2832, Button: Released
+X: 2739, Y: 2795, Button: Released
+X: 2732, Y: 2783, Button: Released
+X: 2735, Y: 2799, Button: Released
+X: 2731, Y: 2805, Button: Released
+X: 2720, Y: 2767, Button: Released
+X: 2743, Y: 2842, Button: Released
+X: 2732, Y: 2795, Button: Released
+X: 2734, Y: 2806, Button: Released
+X: 2718, Y: 2785, Button: Released
+X: 2738, Y: 2779, Button: Released
+X: 2711, Y: 2800, Button: Released
+X: 2723, Y: 2791, Button: Released
+X: 2689, Y: 2767, Button: Released
+X: 2705, Y: 2773, Button: Released
+X: 2703, Y: 2764, Button: Released
+X: 2695, Y: 2772, Button: Released
+X: 2693, Y: 2754, Button: Released
+X: 2601, Y: 2741, Button: Released
+X: 2671, Y: 2736, Button: Released
+X: 2693, Y: 2747, Button: Released
+X: 2688, Y: 2757, Button: Released
+X: 2679, Y: 2755, Button: Released
+X: 2727, Y: 2797, Button: Released
+X: 2750, Y: 2815, Button: Released
+X: 2769, Y: 2829, Button: Released
+X: 2730, Y: 2816, Button: Released
+X: 2738, Y: 2835, Button: Released
+X: 2751, Y: 2793, Button: Released
+X: 2748, Y: 2816, Button: Released
+X: 2704, Y: 2772, Button: Released
+X: 2686, Y: 2762, Button: Released
+X: 2683, Y: 2722, Button: Released
+X: 2670, Y: 2646, Button: Released
+X: 2699, Y: 2771, Button: Released
+X: 2672, Y: 2778, Button: Released
+X: 2706, Y: 2759, Button: Released
+X: 2707, Y: 2805, Button: Released
+X: 2745, Y: 2837, Button: Released
+X: 2768, Y: 2874, Button: Released
+X: 2945, Y: 3029, Button: Released
+X: 2809, Y: 2854, Button: Released
+X: 2914, Y: 2967, Button: Released
+X: 2781, Y: 2889, Button: Released
+X: 0, Y: 3026, Button: Released
+[0;33mW (94501) MIEI_TEST---: vai a sx[0m
+X: 2681, Y: 2982, Button: Released
+X: 2941, Y: 3040, Button: Released
+X: 2864, Y: 2763, Button: Released
+X: 2929, Y: 2824, Button: Released
+X: 2950, Y: 3019, Button: Released
+X: 2959, Y: 3010, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (96401) MIEI_TEST---: vai a dx[0m
+X: 2942, Y: 2996, Button: Released
+X: 2960, Y: 2997, Button: Released
+X: 0, Y: 3015, Button: Released
+[0;33mW (97501) MIEI_TEST---: vai a sx[0m
+X: 2843, Y: 2809, Button: Released
+X: 2930, Y: 3019, Button: Released
+X: 2742, Y: 2956, Button: Released
+X: 0, Y: 3006, Button: Released
+[0;33mW (98801) MIEI_TEST---: vai a sx[0m
+X: 2950, Y: 3031, Button: Released
+X: 2926, Y: 3014, Button: Released
+X: 3022, Y: 3010, Button: Released
+X: 2843, Y: 2891, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (100301) MIEI_TEST---: vai a dx[0m
+X: 2901, Y: 3040, Button: Released
+X: 2879, Y: 2949, Button: Released
+X: 2847, Y: 2924, Button: Released
+X: 2682, Y: 2880, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (101801) MIEI_TEST---: vai a dx[0m
+X: 2935, Y: 3009, Button: Released
+X: 2926, Y: 0, Button: Released
+X: 2930, Y: 0, Button: Released
+X: 2750, Y: 0, Button: Released
+X: 2699, Y: 0, Button: Released
+X: 0, Y: 151, Button: Released
+[0;33mW (103501) MIEI_TEST---: vai a sx[0m
+X: 2877, Y: 2972, Button: Released
+X: 2909, Y: 3051, Button: Released
+X: 4095, Y: 4095, Button: Released
+[0;33mW (104601) MIEI_TEST---: vai a dx[0m
+X: 4095, Y: 4095, Button: Released
+[0;33mW (105301) MIEI_TEST---: vai a dx[0m
+X: 2813, Y: 2864, Button: Released
+X: 2608, Y: 2691, Button: Released
+X: 2697, Y: 2763, Button: Released
+X: 2693, Y: 2663, Button: Released
+X: 2743, Y: 2806, Button: Released
+X: 2736, Y: 2816, Button: Released
+X: 2849, Y: 2935, Button: Released
+X: 2774, Y: 2868, Button: Released
+X: 2861, Y: 2933, Button: Released
+X: 2850, Y: 2933, Button: Released
+X: 2755, Y: 2697, Button: Released
+X: 2739, Y: 2675, Button: Released
+X: 2862, Y: 2935, Button: Released
+X: 2877, Y: 2916, Button: Released
+X: 2864, Y: 2934, Button: Released
+X: 2854, Y: 2992, Button: Released
+X: 2950, Y: 3012, Button: Released
+X: 2946, Y: 3011, Button: Released
+X: 2921, Y: 3022, Button: Released
+X: 2942, Y: 3007, Button: Released
+X: 2903, Y: 3008, Button: Released
+X: 2944, Y: 3021, Button: Released
+X: 2925, Y: 2975, Button: Released
+X: 2889, Y: 3007, Button: Released
+X: 2911, Y: 2988, Button: Released
+X: 2958, Y: 3010, Button: Released
+X: 2754, Y: 2960, Button: Released
+X: 2790, Y: 2891, Button: Released
