@@ -1,4 +1,7 @@
 ## WIRING
+maybe im'stupid cuz in the code the oled sda and scl are inveretd...
+
+
 
 # Joystick:
   - VRx -> D34
